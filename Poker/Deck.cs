@@ -7,7 +7,7 @@ namespace Poker
 {
     public class Deck : IEnumerable<Card>
     {
-        //Maby make a Queue<Card>
+        //Maby make a Stack<Card> || Queue<Card>
 
         public Deck()
         {
@@ -20,7 +20,9 @@ namespace Poker
                 {
                     Cards.Add(new Card(i, type));
                 }
-            } 
+            }
+
+            Shuffle();
         }
 
         protected IList<Card> Cards
@@ -39,7 +41,7 @@ namespace Poker
             return card;
         }
 
-        public void Shuffle()
+        private void Shuffle()
         {
             Random rng = new Random();       
             int n = Cards.Count;            

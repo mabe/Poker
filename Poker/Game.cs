@@ -10,7 +10,6 @@ namespace Poker
         public Game()
         {
             Deck = new Deck();
-            Deck.Shuffle();
 
             Players = new Dictionary<int, Player>();
         }
