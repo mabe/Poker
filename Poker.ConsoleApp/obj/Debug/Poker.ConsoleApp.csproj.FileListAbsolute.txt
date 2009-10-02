@@ -1,0 +1,7 @@
+C:\Projects\Poker\Poker.ConsoleApp\bin\Debug\Poker.ConsoleApp.exe
+C:\Projects\Poker\Poker.ConsoleApp\bin\Debug\Poker.ConsoleApp.pdb
+C:\Projects\Poker\Poker.ConsoleApp\bin\Debug\Poker.dll
+C:\Projects\Poker\Poker.ConsoleApp\bin\Debug\Poker.pdb
+C:\Projects\Poker\Poker.ConsoleApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Poker\Poker.ConsoleApp\obj\Debug\Poker.ConsoleApp.exe
+C:\Projects\Poker\Poker.ConsoleApp\obj\Debug\Poker.ConsoleApp.pdb

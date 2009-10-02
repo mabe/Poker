@@ -1,0 +1,6 @@
+C:\Projects\Poker\Poker.UinitTest\bin\Debug\Poker.UinitTest.dll
+C:\Projects\Poker\Poker.UinitTest\bin\Debug\Poker.UinitTest.pdb
+C:\Projects\Poker\Poker.UinitTest\bin\Debug\nunit.framework.dll
+C:\Projects\Poker\Poker.UinitTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Poker\Poker.UinitTest\obj\Debug\Poker.UinitTest.dll
+C:\Projects\Poker\Poker.UinitTest\obj\Debug\Poker.UinitTest.pdb

@@ -1,0 +1,5 @@
+C:\Projects\Poker\Poker\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Poker\Poker\bin\Debug\Poker.dll
+C:\Projects\Poker\Poker\bin\Debug\Poker.pdb
+C:\Projects\Poker\Poker\obj\Debug\Poker.dll
+C:\Projects\Poker\Poker\obj\Debug\Poker.pdb
