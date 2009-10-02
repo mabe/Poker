@@ -24,5 +24,10 @@ namespace Poker
             get;
             set;
         }
+
+        public override string ToString()
+        {
+            return string.Concat(Index, " of ", Type);
+        }
     }
 }

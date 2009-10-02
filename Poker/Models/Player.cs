@@ -7,26 +7,21 @@ namespace Poker
 {
     public class Player
     {
-        public string Name
+        public Player(string name)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            Name = name;
         }
 
-        public IList<Card> Cards
+        public string Name
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
+        }
+
+        public Hand Hand
+        {
+            get;
+            set;
         }
     }
 }

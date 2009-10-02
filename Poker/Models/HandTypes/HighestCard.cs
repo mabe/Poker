@@ -7,14 +7,11 @@ namespace Poker
 {
     public class HighestIndex : HandType
     {
+        public HighestIndex(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+
         public override byte Rank
         {
             get { return 0; }
-        }
-
-        public override bool Check(IEnumerable<Card> cards)
-        {
-            throw new NotImplementedException();
         }
     }
 }

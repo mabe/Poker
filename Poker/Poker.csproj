@@ -45,29 +45,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Card.cs" />
-    <Compile Include="CardType.cs" />
-    <Compile Include="Deck.cs" />
-    <Compile Include="Flush.cs" />
-    <Compile Include="FourOfAKind.cs" />
-    <Compile Include="FullHouse.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="Hand.cs" />
-    <Compile Include="HighestCard.cs" />
-    <Compile Include="OnePair.cs" />
-    <Compile Include="Player.cs" />
+    <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\CardType.cs" />
+    <Compile Include="Models\Deck.cs" />
+    <Compile Include="Models\Hand.cs" />
+    <Compile Include="Models\HandTypes\Flush.cs" />
+    <Compile Include="Models\HandTypes\FourOfAKind.cs" />
+    <Compile Include="Models\HandTypes\FullHouse.cs" />
+    <Compile Include="Models\Game.cs" />
+    <Compile Include="Models\HandType.cs" />
+    <Compile Include="Models\HandTypes\HighestCard.cs" />
+    <Compile Include="Models\HandTypes\OnePair.cs" />
+    <Compile Include="Models\Player.cs" />
+    <Compile Include="Models\Table.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Straight.cs" />
-    <Compile Include="StraightFlush.cs" />
-    <Compile Include="TexasHoldEm.cs" />
-    <Compile Include="ThreeOfAKind.cs" />
-    <Compile Include="TwoPair.cs" />
+    <Compile Include="Models\HandTypes\Straight.cs" />
+    <Compile Include="Models\HandTypes\StraightFlush.cs" />
+    <Compile Include="Models\TexasHoldEm.cs" />
+    <Compile Include="Models\HandTypes\ThreeOfAKind.cs" />
+    <Compile Include="Models\HandTypes\TwoPair.cs" />
+    <Compile Include="Models\Seat.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Diagrams\Main.cd" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

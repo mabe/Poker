@@ -7,14 +7,18 @@ namespace Poker
 {
     public class FullHouse : HandType
     {
+        public FullHouse(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+
         public override byte Rank
         {
             get { return 6; }
         }
 
-        public override bool Check(IEnumerable<Card> cards)
+        public override bool Check()
         {
-            throw new NotImplementedException();
+            var pairs = (from c in AllCards group c by c.Index into pair select pair);
+
+            return (pairs.Where(x => x.Count() == 3).SingleOrDefault() != null && pairs.Where(x => x.Count() == 2).SingleOrDefault() != null);
         }
     }
 }
