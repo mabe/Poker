@@ -18,7 +18,7 @@ namespace Poker
         {
             var pairs = (from c in AllCards group c by c.Index into pair select pair);
 
-            return (pairs.Where(x => x.Count() == 3).SingleOrDefault() != null && pairs.Where(x => x.Count() == 2).SingleOrDefault() != null);
+            return (pairs.Where(x => x.Count() == 3).Count() > 0 && pairs.Where(x => x.Count() == 2).Count() > 0);
         }
     }
 }

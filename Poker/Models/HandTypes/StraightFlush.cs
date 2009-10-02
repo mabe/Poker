@@ -16,9 +16,31 @@ namespace Poker
 
         public override bool Check()
         {
-            //return base.Check();
+            var flush = (from c in AllCards group c by c.Type into type where type.Count() >= 5 select type).SingleOrDefault();
 
-            throw new NotImplementedException();
+            if (flush == null)
+                return false;
+
+            var indexs = (from c in flush group c by c.Index into index orderby index.Key select index.Key);
+
+            int i = indexs.First(), straight = 0;
+
+            foreach (var index in indexs)
+            {
+                if (i != index)
+                {
+                    if (straight >= 5)
+                        break;
+
+                    i = index;
+                    straight = 0;
+                }
+
+                straight++;
+                i++;
+            }
+
+            return (straight >= 5);
         }
     }
 }

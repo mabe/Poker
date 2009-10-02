@@ -16,6 +16,12 @@ namespace Poker.ConsoleApp
             var game = new TexasHoldEm();
             game.PlayerJoins("Magnus");
             game.PlayerJoins("Per");
+            game.PlayerJoins("Bertil");
+            game.PlayerJoins("Sven");
+            game.PlayerJoins("Göran");
+            game.PlayerJoins("Adrian");
+            game.PlayerJoins("Erik");
+            game.PlayerJoins("Nils");
 
             while (run)
             {

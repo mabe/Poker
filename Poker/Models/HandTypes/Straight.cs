@@ -22,18 +22,20 @@ namespace Poker
 
             foreach (var index in indexs)
             {
-                straight++;
-
                 if (i != index)
                 {
+                    if (straight >= 5)
+                        break;
+
                     i = index;
                     straight = 0;
                 }
 
+                straight++;
                 i++;
             }
 
-            return (straight > 5);
+            return (straight >= 5);
         }
     }
 }

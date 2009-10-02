@@ -16,7 +16,9 @@ namespace Poker
 
         public override bool Check()
         {
-            throw new NotImplementedException();
+            var pairs = (from c in AllCards group c by c.Index into pair where pair.Count() == 4 select pair).Count();
+
+            return pairs > 0;
         }
     }
 }

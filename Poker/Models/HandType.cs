@@ -51,7 +51,9 @@ namespace Poker
                                     new ThreeOfAKind(cards, cardsOnTable), 
                                     new Straight(cards, cardsOnTable), 
                                     new Flush(cards, cardsOnTable),
-                                    new FullHouse(cards, cardsOnTable)
+                                    new FullHouse(cards, cardsOnTable),
+                                    new FourOfAKind(cards, cardsOnTable),
+                                    new StraightFlush(cards, cardsOnTable)
                                 } orderby h.Rank descending select h).ToList();
         }
 
