@@ -10,22 +10,8 @@ namespace Poker
         public Game()
         {
             Deck = new Deck();
-
-            Players = new Dictionary<int, Player>();
         }
 
-        public abstract void Deal();
-
-        public IDictionary<int, Player> Players
-        {
-            get;
-            private set;
-        }
-
-        public Deck Deck
-        {
-            get;
-            private set;
-        }
+        protected Deck Deck { get; set; }
     }
 }

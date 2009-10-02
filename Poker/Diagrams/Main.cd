@@ -1,116 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Poker.Card">
-    <Position X="3.25" Y="0.5" Width="1.5" />
+    <Position X="3.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQEAAAAAAAA=</HashCode>
-      <FileName>Card.cs</FileName>
+      <FileName>Models\Card.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Poker.Deck">
-    <Position X="5.5" Y="0.75" Width="1.5" />
+    <Position X="5.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AiAAAAAAAAAAABAAAAAAAACIAAAAAAAAAAAAAAAAEAA=</HashCode>
-      <FileName>Deck.cs</FileName>
+      <FileName>Models\Deck.cs</FileName>
     </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Cards" />
+    </ShowAsCollectionAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Poker.Player">
-    <Position X="7.75" Y="0.75" Width="1.5" />
+    <Position X="5.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAQIAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Player.cs</FileName>
+      <FileName>Models\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Poker.Hand">
-    <Position X="3.25" Y="2.25" Width="1.5" />
+  <Class Name="Poker.HandType">
+    <Position X="3.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Hand.cs</FileName>
+      <FileName>Models\HandType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.HighestIndex">
-    <Position X="1.25" Y="4.25" Width="1.5" />
+    <Position X="1.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>HighestCard.cs</FileName>
+      <FileName>Models\Hands\HighestCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.OnePair">
-    <Position X="3.25" Y="4.25" Width="1.5" />
+    <Position X="3.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>OnePair.cs</FileName>
+      <FileName>Models\Hands\OnePair.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.TwoPair">
-    <Position X="5.25" Y="4.25" Width="1.5" />
+    <Position X="5.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TwoPair.cs</FileName>
+      <FileName>Models\Hands\TwoPair.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.Game">
     <Position X="11" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAABAAAAAAAA=</HashCode>
-      <FileName>Game.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Models\Game.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.ThreeOfAKind">
-    <Position X="7.25" Y="4.25" Width="1.5" />
+    <Position X="7.25" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ThreeOfAKind.cs</FileName>
+      <FileName>Models\Hands\ThreeOfAKind.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.Straight">
-    <Position X="9" Y="4.25" Width="1.5" />
+    <Position X="9" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Straight.cs</FileName>
+      <FileName>Models\Hands\Straight.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.Flush">
-    <Position X="11" Y="4.25" Width="1.5" />
+    <Position X="11" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Flush.cs</FileName>
+      <FileName>Models\Hands\Flush.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.FullHouse">
-    <Position X="13" Y="4.25" Width="1.5" />
+    <Position X="13" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FullHouse.cs</FileName>
+      <FileName>Models\Hands\FullHouse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.FourOfAKind">
-    <Position X="15" Y="4.25" Width="1.5" />
+    <Position X="15" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>FourOfAKind.cs</FileName>
+      <FileName>Models\Hands\FourOfAKind.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.StraightFlush">
-    <Position X="17" Y="4.25" Width="1.5" />
+    <Position X="17" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAABAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StraightFlush.cs</FileName>
+      <FileName>Models\Hands\StraightFlush.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Poker.TexasHoldEm">
-    <Position X="11" Y="2.5" Width="1.5" />
+    <Position X="11" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>TexasHoldEm.cs</FileName>
+      <FileName>Models\TexasHoldEm.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Enum Name="Poker.CardType">
-    <Position X="1.25" Y="0.75" Width="1.5" />
+    <Position X="1.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAACAAAAAAIAAIAAAAAA=</HashCode>
-      <FileName>CardType.cs</FileName>
+      <FileName>Models\CardType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Tahoma" Size="8.25" />

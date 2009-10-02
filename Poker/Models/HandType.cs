@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Poker
 {
-    public abstract class Hand
+    public abstract class HandType
     {
         public abstract bool Check(IEnumerable<Card> cards);
 

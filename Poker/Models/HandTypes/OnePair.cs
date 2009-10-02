@@ -5,11 +5,11 @@ using System.Text;
 
 namespace Poker
 {
-    public class FourOfAKind : Hand
+    public class OnePair : HandType
     {
         public override byte Rank
         {
-            get { return 7; }
+            get { return 1; }
         }
 
         public override bool Check(IEnumerable<Card> cards)
