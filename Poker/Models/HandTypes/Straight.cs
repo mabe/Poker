@@ -7,7 +7,7 @@ namespace Poker
 {
     public class Straight : HandType
     {
-        public Straight(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+        public Straight(Hand hand) : base(hand) { }
 
         public override byte Rank
         {

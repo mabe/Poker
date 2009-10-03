@@ -7,53 +7,57 @@ namespace Poker
 {
     public abstract class HandType
     {
-        public HandType(IEnumerable<Card> cards, IEnumerable<Card> cardsOnHand)
+        public HandType(Hand hand)
         {
             var all = new List<Card>();
+            all.AddRange(hand.Cards);
+            all.AddRange(hand.CardsOnTable);
 
-            all.AddRange(cards);
-            all.AddRange(cardsOnHand);
-
+            Hand = hand;
             AllCards = all;
+            Cards = new Card[5];
         }
 
-        public abstract byte Rank
-        {
-            get;
-        }
-
-        public int HighestIndexOnHand
-        {
-            get;
-            set;
-        }
+        public int HighestIndexOnHand { get; set; }
 
         public int HighestIndexOnTable { get; set; }
 
+        protected Hand Hand { get; set; }
+
         protected IEnumerable<Card> AllCards { get; private set; }
 
-        public virtual bool Check()
+        protected Card[] Cards { get; set; }
+
+        public bool CheckCards()
         {
-            return true;
+            var isType = Check();
+
+
+
+            return isType;
         }
+
+        public abstract byte Rank { get; }
+
+        public abstract bool Check();
 
         //protected void CalculateHighestIndex(IEnumerable<Card> cards)
         //{
         //    HighestIndex = (from c in cards orderby c.Index descending select c.Index).Take(1).Single();
         //}
 
-        public static IEnumerable<HandType> Hands(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable)
+        public static IEnumerable<HandType> Hands(Hand hand)
         {
             return (from h in new HandType[] { 
-                                    new HighestIndex(cards, cardsOnTable), 
-                                    new OnePair(cards, cardsOnTable), 
-                                    new TwoPair(cards, cardsOnTable), 
-                                    new ThreeOfAKind(cards, cardsOnTable), 
-                                    new Straight(cards, cardsOnTable), 
-                                    new Flush(cards, cardsOnTable),
-                                    new FullHouse(cards, cardsOnTable),
-                                    new FourOfAKind(cards, cardsOnTable),
-                                    new StraightFlush(cards, cardsOnTable)
+                                    new HighestIndex(hand), 
+                                    new OnePair(hand), 
+                                    new TwoPair(hand), 
+                                    new ThreeOfAKind(hand), 
+                                    new Straight(hand), 
+                                    new Flush(hand),
+                                    new FullHouse(hand),
+                                    new FourOfAKind(hand),
+                                    new StraightFlush(hand)
                                 } orderby h.Rank descending select h).ToList();
         }
 

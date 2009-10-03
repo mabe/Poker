@@ -7,7 +7,7 @@ namespace Poker
 {
     public class FourOfAKind : HandType
     {
-        public FourOfAKind(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+        public FourOfAKind(Hand hand) : base(hand) { }
 
         public override byte Rank
         {

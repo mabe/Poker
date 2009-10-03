@@ -7,7 +7,7 @@ namespace Poker
 {
     public class TwoPair : HandType
     {
-        public TwoPair(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+        public TwoPair(Hand hand) : base(hand) { }
 
         public override byte Rank
         {

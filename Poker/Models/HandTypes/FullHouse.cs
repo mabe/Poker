@@ -7,7 +7,7 @@ namespace Poker
 {
     public class FullHouse : HandType
     {
-        public FullHouse(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+        public FullHouse(Hand hand) : base(hand) { }
 
         public override byte Rank
         {

@@ -7,7 +7,7 @@ namespace Poker
 {
     public class StraightFlush : HandType
     {
-        public StraightFlush(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+        public StraightFlush(Hand hand) : base(hand) { }
 
         public override byte Rank
         {

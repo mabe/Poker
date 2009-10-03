@@ -33,9 +33,9 @@ namespace Poker
 
         public void CheckHandSetType()
         {
-            foreach (var handtype in HandType.Hands(Cards, CardsOnTable))
+            foreach (var handtype in HandType.Hands(this))
             {
-                if (handtype.Check())
+                if (handtype.CheckCards())
                 {
                     HandType = handtype;
                     break;

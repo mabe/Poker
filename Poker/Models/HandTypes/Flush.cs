@@ -7,7 +7,7 @@ namespace Poker
 {
     public class Flush : HandType
     {
-        public Flush(IEnumerable<Card> cards, IEnumerable<Card> cardsOnTable) : base(cards, cardsOnTable) { }
+        public Flush(Hand hand) : base(hand) { }
 
         public override byte Rank
         {
