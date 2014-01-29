@@ -16,28 +16,49 @@ type Card(rank:Rank, suit:Suit) =
     override this.ToString() =  String.Format("{0} of {1}s", this.Rank, this.Suit)
 
 type Player() =
+    let groupByRank = fun(cards:seq<Card>) -> cards |> Seq.groupBy (fun (x) -> x.Rank)
+    let mapRankGroupLength = fun(cards:seq<Rank * seq<Card>>) -> cards |> Seq.map (fun (key, group) -> Seq.length group) 
+
+    let fullhouse = fun(cards:list<Card>) ->
+        let kinds = cards |> groupByRank |> mapRankGroupLength 
+        (kinds |> Seq.exists (fun x -> x = 2) && 
+         kinds |> Seq.exists (fun x -> x = 3))
+
     let flush = fun(cards:list<Card>) -> 
-        let cards = cards |> List.map (fun(x) -> x.Suit)
-        cards |> List.map (fun(x) -> if Seq.head cards = x then true else false) |> Seq.exists (fun(x) -> x = false) |> not
+        cards |> List.map (fun(x) -> x.Suit) 
+            |> List.map (fun(x) -> if cards.Head.Suit = x then true else false) 
+            |> Seq.exists (fun(x) -> x = false) |> not
+
     let straight = fun(cards:list<Card>) -> 
         let cards = cards |> List.map (fun(x) -> int(x.Rank)) |> List.sort
         if (cards = [1;10;11;12;13]) then
             true
         else
             cards |> List.mapi(fun i x -> int (Seq.head(cards)) + i = int (x)) |> List.exists (fun(x) -> x = false) |> not
+
     let kind = fun(cards:list<Card>, n) ->
-        cards |> Seq.groupBy (fun(x) -> x.Rank) |> Seq.map (fun (key, group) -> Seq.length group) |> Seq.exists (fun(x) -> x = n)
+        cards |> groupByRank |> mapRankGroupLength |> Seq.exists (fun(x) -> x = n)
+    
+    let twopair = fun(cards:list<Card>) ->
+        (cards |> groupByRank |> mapRankGroupLength |> Seq.filter (fun(x) -> x = 2) |> Seq.length) = 2
+
     member this.Hand(cards:list<Card>) = 
         if flush(cards) && straight(cards) then
             Hand.StraightFlush
         elif kind(cards, 4) then
             Hand.FourOfAKind
+        elif fullhouse(cards) then
+            Hand.FullHouse
         elif flush(cards) then
             Hand.Flush
         elif straight(cards) then
             Hand.Straight
         elif kind(cards, 3) then
             Hand.ThreeOfAKind
+        elif twopair(cards) then
+            Hand.TwoPair
+        elif kind(cards, 2) then
+            Hand.OnePair
         else
             Hand.HighCard 
 
@@ -55,8 +76,8 @@ type Deck() =
 
 
 let deck = new Deck()
-let cards = [deck.Deal();deck.Deal();deck.Deal();deck.Deal();deck.Deal()] 
 let player = new Player()
+let cards = [deck.Deal();deck.Deal();deck.Deal();deck.Deal();deck.Deal();] 
 let hand = player.Hand(cards)
 
 //printfn "############# %A ################" hand
